@@ -33,6 +33,11 @@ def get_one_user(id:str):
     data = userConn.read_one(id)
     return data
 
+@user_router.delete("/user/{id}")
+def delete_one_user(id:str):
+    data = userConn.delete_one(id)
+    return data
+
 
 
 @user_router.get("/user/login/{nombre}/{contrasena}")
