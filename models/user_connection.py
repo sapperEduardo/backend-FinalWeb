@@ -25,11 +25,17 @@ class UserConnection():
         self.conn.commit()
 
     def read_all(self):
-        with self.conn.cursor() as cur:
-            data = cur.execute("""
-        SELECT * FROM "usuarios";
-        """)
-            return data.fetchall()
+        try:
+            with self.conn.cursor() as cur:
+                cur.execute("""
+                SELECT * FROM "usuarios";
+                """)
+                return cur.fetchall()
+        except psycopg.Error as e:
+            print(f"Error leyendo todos los usuarios: {e}")
+            self.conn.rollback()
+            return []
+
 
 
     def read_one(self, id):
