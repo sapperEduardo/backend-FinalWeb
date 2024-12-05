@@ -12,7 +12,8 @@ origins = [
     "http://127.0.0.1:5500",   # Desarrollo local
     "http://localhost:5173",   # Alternativa localhost
     "https://gymfitgym.netlify.app",  # Dominio de tu aplicación frontend en producción
-    "https://backend-finalweb.onrender.com"  # Dominio del backend en producción
+    "https://backend-finalweb.onrender.com",
+    "*"# Dominio del backend en producción
 ]
 
 # Configuración del middleware CORS
