@@ -109,7 +109,7 @@ class UserConnection():
     def delete_one(self, id):
         with self.conn.cursor() as cur:
             cur.execute("""
-            DELETE FROM "users"	WHERE id = %s;
+            DELETE FROM "usuarios" WHERE id = %s;
         """, (id,))
         self.conn.commit()
     
