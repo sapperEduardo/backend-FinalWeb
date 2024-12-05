@@ -17,7 +17,7 @@ origins = [
 # Configura el middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],            # Permitir los orígenes especificados
+allow_origins=["https://gymfitgym.netlify.app", "http://localhost:5173"]            # Permitir los orígenes especificados
     allow_credentials=True,            # Permitir el uso de cookies
     allow_methods=["*"],               # Permitir todos los métodos (GET, POST, etc.)
     allow_headers=["*"],               # Permitir todos los encabezados
